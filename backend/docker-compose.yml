@@ -1,0 +1,42 @@
+services:
+  cyberslum-backend:
+    build: ./
+    image: cyberslum-backend
+    ports:
+      - "127.0.0.1:8000:8000"
+    env_file:
+      - app/.env
+    environment:
+      - POSTGRES_SERVER=db_cyberslum
+    depends_on:
+      db_cyberslum:
+        condition: service_healthy
+#    volumes:
+#      - "/home/ladmin/cyberslum-backend/media_storage:/cyberslum_backend/media_storage"
+#       - "D:/.prod/cyberslum-backend/media_storage:/cyberslum_backend/media_storage"
+    networks:
+      - cyberslum_network
+    restart: always
+
+  db_cyberslum:
+    image: postgres:16
+    ports:
+      - "127.0.0.1:5434:5433"
+    env_file:
+      - ./app/.env
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - "./pgdata:/var/lib/postgresql/data/pgdata"
+    networks:
+      - cyberslum_network
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}" ]
+      interval: 3s
+      timeout: 3s
+      retries: 5
+    restart: always
+
+
+networks:
+  cyberslum_network:

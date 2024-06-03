@@ -1,0 +1,103 @@
+@import '../../style/global.scss';
+@import '../../style/colors.scss';
+
+.registr {
+    overflow: hidden;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+
+    &_section {
+        height: 74vh;
+        width: 50vh;
+        margin-top: 50px;
+        padding: 0 70px 0 70px;
+        border-radius: 20px;
+        background: $dark;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, .3);
+        color: #fff;
+
+        &_form {
+            width: 100%;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            h3 {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+
+            &_bg {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                label {
+                    margin-bottom: 5px;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+
+                input {
+                    height: 50px;
+                    width: 100%;
+                    margin-bottom: 16px;
+                    padding-left: 20px;
+
+                    border: 2px solid rgba(75, 64, 145, .4);
+                    border-radius: 10px;
+                    background: none;
+                    font-size: 18px;
+                    color: #fff;
+
+                    &:active,
+                    &:hover,
+                    &:focus {
+                        outline: 0;
+                        outline-offset: 0;
+                    }
+
+                    &:focus {
+                        border: 2px solid rgba(75, 64, 145, .8);
+                    }
+                }
+
+                .buttons_section {
+                    margin-top: 34px;
+                    margin-bottom: 26px;
+
+                    .but {
+                        overflow: hidden;
+                        border-radius: 50px;
+                        border: 3px solid rgba(75, 64, 145, .4);
+
+                        font-size: 14px;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        animation: backgroundPosition 8s infinite;
+                        background: none;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+
+                    .reg_but {
+                        width: 250px;
+                        padding: 15px 20px;
+                    }
+                }
+
+                .ready {
+                    width: 100%;
+                    text-align: center;
+
+                    span {
+                        .link {
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

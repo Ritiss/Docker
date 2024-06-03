@@ -1,0 +1,198 @@
+@import '../../style/global.scss';
+@import '../../style/colors.scss';
+@import '../../style/neon.scss';
+
+.order {
+    width: 100vw;
+    background: $dark;
+    flex-direction: column;
+
+    &_header {
+        margin-top: 20px;
+        padding-left: 80px;
+        min-height: 80px;
+        width: 84%;
+        justify-content: flex-start;
+
+        img {
+            width: 250px;
+            margin-right: 30px;
+        }
+
+        .musicButton {
+            cursor: pointer;
+            width: 30px;
+            animation: spin 6s linear infinite, broken 5s infinite;
+
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+
+    .bg_cont {
+        padding-left: 41px;
+        margin-left: 11px;
+        height: 100%;
+        border-left: 1px solid $pink;
+    }
+
+    .bg_number {
+        width: 100%;
+        margin-bottom: 10px;
+        justify-content: flex-start;
+
+        p {
+            font-size: 16px;
+            color: $dark;
+        }
+
+        .step_number {
+            margin-right: 30px;
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            font-weight: bold;
+            background: $pink;
+            box-shadow: 0 0px 4px 0 rgba(253, 88, 179, 0.5), 0 0px 16px 0 rgba(253, 88, 179, 0.5);
+        }
+    }
+
+    &_bg {
+        height: 1000px;
+        width: 84%;
+        margin-top: 10px;
+        padding: 40px 80px;
+        flex-direction: column;
+        color: #fff;
+
+        &_cont {
+            height: 25%;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+
+            h3 {
+                font-size: 26px;
+                // text-shadow: 0 0 5px #fd58b3a1, 0 0 20px #fd58b370;
+            }
+        }
+
+        &_profile {
+
+            &_g {
+
+                &_info {
+                    cursor: pointer;
+                    height: 100px;
+                    width: 400px;
+                    border-radius: 12px;
+                    border: 3px solid rgba(253, 88, 179, 0.5);
+                    background: #0c0d14;
+                    box-shadow: 0 0px 4px 0 rgba(253, 88, 179, 0.5), 0 0px 16px 0 rgba(253, 88, 179, 0.5);
+
+                    .avatar {
+                        height: 100%;
+                        width: 30%;
+
+                        &_section {
+                            height: 80px;
+                            width: 80px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                        }
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+
+                    .name {
+                        height: 100%;
+                        width: 70%;
+
+                        p {
+                            width: 100%;
+                            font-size: 22px;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_adress {
+
+            .bg_cont {
+                flex-direction: column;
+
+                .adress_link {
+                    a {
+                        margin-bottom: 20px;
+                        color: #fff;
+                    }
+                }
+            }
+
+        }
+
+        &_payment {
+
+            .bg_cont {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .bg_but {
+                    height: 50px;
+                    width: 100px;
+                    margin-bottom: 14px;
+
+                    background: #cccccc;
+                }
+            }
+
+            .radio {
+                height: 100%;
+                width: 100%;
+                flex-direction: column;
+
+                &_line {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    margin-bottom: 20px;
+
+                    input {
+                        border: 2px solid white;
+
+                    }
+
+                    label {
+                        cursor: pointer;
+                        margin-left: 20px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        &_button {
+
+            .neon_button {
+                margin-left: 44px;
+                height: 100px;
+                width: 300px;
+            }
+        }
+    }
+}

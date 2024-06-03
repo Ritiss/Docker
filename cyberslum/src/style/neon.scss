@@ -1,0 +1,64 @@
+@import './global.scss';
+@import './colors.scss';
+@import './animation.scss';
+
+.neon_button {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    // padding: 30px 60px;
+    border: 3px solid $pink;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, .5);
+    background-image: url('/img/main/button_frame.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 110% 110%;
+    box-shadow: 0 0 45px rgba(253, 88, 178, .5), 1px 1px 4px $pink, inset 0 0 8px $pink;
+
+    transition: all .8s cubic-bezier(1, 3, .8, 1);
+
+    font-size: 28px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $pink;
+
+    &:hover {
+        border-color: $blue;
+        background-size: 98% 94%;
+        font-size: 26px;
+        font-weight: 500;
+        color: $blue;
+        box-shadow: 0 0 45px rgba(88, 206, 253, 0.5), 1px 1px 4px $blue, inset 0 0 8px $blue;
+    }
+
+    &:hover .flash {
+        animation: lightBl 2s forwards, broken 3s infinite;
+    }
+
+    // &:hover .letter_broken_first {
+    //     animation: lightBl 2s forwards, flashBl 15s 6s infinite;
+    // }
+
+    &:hover .letter_broken {
+        animation: lightBl 2s forwards, flashBl 3s 2s infinite;
+    }
+
+    .flash {
+        animation: light 2s forwards, broken 3s infinite;
+    }
+
+    .letter_broken_first {
+        animation: light 2s forwards, flash 15s 6s infinite;
+    }
+
+    .letter_broken {
+        animation: light 2s forwards, flash 3s 2s infinite;
+    }
+}

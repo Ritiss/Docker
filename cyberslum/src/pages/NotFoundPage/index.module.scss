@@ -1,0 +1,49 @@
+@import '../../style/global.scss';
+@import '../../style/colors.scss';
+@import '../../style/animation.scss';
+
+.error {
+    overflow: hidden;
+    height: 100vh;
+
+    &_section {
+        flex-direction: column;
+
+        h3,
+        h4 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 100px;
+            color: #e7c7aa;
+        }
+        
+        h3 {
+            animation: lightRed 4s forwards, broken 3s infinite;
+        }
+
+        h4 {
+            animation: lightRed 2s forwards, broken 2s infinite;
+        }
+
+        .link {
+            margin-top: 80px;
+            font-size: 22px;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #fb6c2a, 0 0 5px #fb6c2a;
+            color: #fff7db;
+        }
+    }
+}
+
+@keyframes lightRed {
+    0% {
+        color: #e7c7aa;
+        text-shadow: 0 0 .5rem #c02525, 0 0 1.5rem #bb511f, -.2rem .1rem 1rem #bb5c30, .2rem .1rem 1rem #ac2828, 0 -.5rem 2rem #792a22, 0 .5rem 4rem #77261d;
+    }
+
+    100% {
+        color: #fff7db;
+        text-shadow: 0 0 .5rem #fb2a2a, 0 0 1.5rem #fb6c2a, -.2rem .1rem 1rem #fb6c2a, .2rem .1rem 1rem #c21111, 0 -.5rem 2rem #ff1900, 0 .5rem 4rem #ff1900;
+    }
+}

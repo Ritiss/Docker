@@ -1,0 +1,11 @@
+$dark: #07080d;
+
+$pink: #fd58b2;
+$white_pink: #ffeafa;
+$light_pink: #ff51b1;
+
+$blue: #5ff3fb;
+$light_blue: #22f4ff;
+
+$shadow_pink: 0 0 .5rem $white_pink, 0 0 1.5rem $light_pink, -.2rem .1rem 1rem $light_pink, .2rem .1rem 1rem $light_pink, 0 -.5rem 2rem $pink, 0 .5rem 4rem $pink;
+$shadow_blue: 0 0 .5rem $blue, 0 0 1.5rem $blue, -.2rem .1rem 1rem $blue, .2rem .1rem 1rem $blue, 0 -.5rem 2rem $blue, 0 .5rem 4rem $blue;

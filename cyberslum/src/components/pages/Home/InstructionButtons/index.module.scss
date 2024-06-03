@@ -1,0 +1,26 @@
+p {
+    color: #fff;
+}
+
+.active {
+    color: #c92323;
+}
+
+.buttons_block {
+    height: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    button {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        background: none;
+
+        text-align: end;
+        font-size: 30px;
+        color: #fff;
+    }
+}

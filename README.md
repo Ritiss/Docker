@@ -39,6 +39,8 @@ Postman
 
 
 ![изображение](https://github.com/Ritiss/Docker/assets/115828441/e74105dd-3144-4677-9ea9-e5bf22c2f1e0)
+
+
 6. Нажать на "Add request"
 
 
@@ -49,10 +51,14 @@ Postman
 
     
 ![изображение](https://github.com/Ritiss/Docker/assets/115828441/304ba615-8d6e-4664-a37e-d07d53c8549b)
+
+
 8. Выбрать Body - raw
 
 
 ![изображение](https://github.com/Ritiss/Docker/assets/115828441/80969623-0f0d-4966-a673-00401eb8a6bd)
+
+
 9. Внести *данные* и отправить запрос SEND
 
 

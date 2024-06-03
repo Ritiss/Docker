@@ -152,10 +152,6 @@ cython_debug/
 *.DS_Store
 ._*
 
-# SQLite
-sqlite_database/
-pgdata/
-
 # Project specific
 media_storage
 
